@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fresh Grocery | Top Rated E-Groceries Shop in Indonesia</title> 
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="assets/logo.png" alt="logo">
+        <div class="menu">
+            <div class="menu_item"><a href="#home">Home</a></div>
+            <div class="menu_item center"><a href="#our_package">Our Package</a></div>
+            <div class="menu_item"><a href="#call_us">Call Us</a></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="home">
+            <h1>Top Rated E-Groceries Shop in Indonesia</h1>
+            <h2>Everyday with the best ingredients</h2>
+        </section>
+        
+        <section class="body">
+
+            <div class="element left">
+                <div>
+                    <img class="img_slideshow" src="assets/Untitled1.png" alt="" width="75%">
+                    <img class="img_slideshow" src="assets/Untitled2.png" alt="" width="75%">
+                    <img class="img_slideshow" src="assets/Untitled3.png" alt="" width="75%">
+                    
+                    <button onclick="plusDivs(-1)">Previous</button>
+                    <button onclick="plusDivs(1)">Next</button>
+                </div>
+
+                
+                <script>
+                    var slideIndex = 1;
+                    showDivs(slideIndex);
+
+                    function plusDivs(index) {
+                        showDivs(slideIndex += index);
+                    }
+
+                    function showDivs(index) {
+                        var i;
+                        var imgList = document.getElementsByClassName("img_slideshow");
+                        if (index > imgList.length) slideIndex = 1;
+                        else if (index < 1) slideIndex = imgList.length;
+
+                        for(i = 0; i < imgList.length; i++) {
+                            imgList[i].style.display = "none";
+                        }
+                        
+                        imgList[slideIndex - 1].style.display = "block";
+                    }
+
+                    setInterval(() => {
+                        plusDivs(1);
+                    },
+                    3000);
+
+                </script>
+
+
+
+        <div>
+                <div class="review">
+                    <p>“Setiap hari beli sayur buah yang fresh disini”</p>
+                </div>
+
+                <div class="userdetails">                    
+                    <div class="customer_data">
+                        <div class="customer_name">Florence Hughes</div>
+                        <div class="designation">Ibu Rumah Tangga, 28</div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="bottom_border"></div>
+        </div>
+
+    <br>
+                <div class="content_benefit">
+                    <h3>
+                        Use this space to provide users with more information about your offer. Consider it a follow-up to your headline and explain the benefits of your service or product                    
+                    </h3>
+
+                    <div>
+                        <ol>
+                            <li><span>Your first feature, written in the form of a benefits statement</span></li>
+                            <li><span>Your second feature, written in the form of a benefits statement</span></li>
+                            <li><span>Your third feature, written in the form of a benefits statement</span></li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div> 
+            
+<br> 
+            <div class="element right" id="form">
+                <form class="form" name="order-form" onsubmit="return validateForm()">
+                    <div class="form_title" style="font-size: xx-large; font-weight: bold;">Contact Us</div>
+                    <div class="form_title" style="font-size: large; opacity: 70%;">Our sales will contact you 1x24 hours after we receive your data</div>
+                    
+                    <label  for="name">Your Name</label>
+                    <input type="text" class="input" id="name" name="name" required><br>
+
+
+                    <label  for="email">Email Address</label>
+                    <input type="email" class="input" id="email" name="email" required><br>
+
+                    <label for="finterested">What are you interested in?</label>
+                    <input list="interest" id="finterested" name="finterested" placeholder="Select Option"/>
+                    <datalist id="interest">
+                        <option value="Fresh Vegetables"></option>
+                        <option value="Fresh Fruit"></option>
+                        <option value="Instant Delivery"></option>
+                        <option value="kitchen Ingredients"></option>
+                        <option value="kitchen set"></option>
+                        <option value="Bunding Set"></option>
+                      </datalist>
+                    <br>
+                    
+                    <input class="send" type="submit" value="SUBMIT">
+                </form>
+                <p id="email_error"></p>
+            </div>
+
+            </div> 
+
+
+        </section> 
+
+<br>
+        <section id="our_package" class="our_package">
+            <div class="package_banner" id="package_banner">
+                <h1>Our Package</h1>
+            </div>
+
+            <div class="package_wrapper">
+                <div class="package_item">
+                    <div class="package_details">
+                        <div class="package_name">Fresh Vegetables</div>
+                        <div class="package_desc">Sayuran segar langsung dari sumber pertanian terbaik</div>
+                    </div>
+                </div>
+
+                <div class="package_item">
+                    <div class="package_details">
+                        <div class="package_name">Fresh Fruit</div>
+                        <div class="package_desc">Buah dengan kualitas terbaik dari local atau import dan harga yang menarik</div>
+                    </div>
+                </div>
+
+                <div class="package_item">
+                    <div class="package_details">
+                        <div class="package_name">Instant Delivery</div>
+                        <div class="package_desc">Di kirim instant oleh kurir yang telah di training dengan SOP untuk menjaga kondisi belanja kamu</div>
+                    </div>
+                </div>
+
+                <div class="package_item">
+                    <div class="package_details">
+                        <div class="package_name">kitchen Ingredients</div>
+                        <div class="package_desc">Bumbu dapur lengkap untuk keperluan memasak kamu</div>
+                    </div>
+                </div>
+
+                <div class="package_item">
+                    <div class="package_details">
+                        <div class="package_name">kitchen set</div>
+                        <div class="package_desc">Segala jenis alat masak untuk membantu kamu memasak</div>
+                    </div>
+                </div>
+
+                <div class="package_item">
+                    <div class="package_details">
+                        <div class="package_name">Bunding Set</div>
+                        <div class="package_desc">Bingung masak apa? Sudah tersedia paket untuk kamu masak di dapur mu</div>
+                    </div>
+                </div>
+
+            </div> 
+
+        </section> 
+
+        <section id="call_us" class="call_us">
+            <h1>Call Us!</h1>
+                    <p></p>
+                    <div>
+                        <button class="shop-now" type="button">
+                            <a href="#form" id="shop">Call to Shop</a>
+                        </button>
+                    </div><br><br>
+        </section> 
+
+    </main>
+
+
+</body>
+</html>
